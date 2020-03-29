@@ -1,0 +1,5 @@
+\babel@toc {french}{}
+\contentsline {part}{Entr\IeC {\'e}es \vspace \bigskipamount }{}
+\contentsline {part}{Plats Chauds \vspace \bigskipamount }{}
+\contentsline {part}{P\IeC {\^a}tisserie \vspace \bigskipamount }{}
+\contentsline {subsection}{Shortbread }{1}

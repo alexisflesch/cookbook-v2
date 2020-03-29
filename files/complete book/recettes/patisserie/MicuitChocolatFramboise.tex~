@@ -1,0 +1,33 @@
+\recette[Mi-cuit]{Mi-cuit chocolat framboise}
+
+\index{nom}{Mi-cuit chocolat framboise}
+\index{cat}{Gateaux@Gâteaux!Mi-cuit chocolat framboise}
+
+\temps{20 minutes}{7 minutes}
+
+\ingredients[pour 4 personnes]{%
+    \item 2 \oe ufs
+    \item 50g de sucre en poudre
+    \item 60g de beurre
+    \item 65g de chocolat + 4 carrés
+    \item 30g de farineux
+    \item 4 framboises \medskip\newline
+    \textbf{Pour le coulis :}
+    \item 125g de framboises
+    \item 20g de sucre
+    \item 20g d'eau
+}
+
+\preparation{%
+\init Mélanger les œufs et le sucre en poudre. Fondre au bain marie le beurre et le chocolat et le
+    laisser tiédir 10 minutes (pour ne pas cuire les \oe ufs)
+\init Mélanger les deux appareils et ajouter la farine. Mettre la préparation dans des moules à
+muffin (remplir aux trois quarts). Au centre, mettre un carré de chocolat et une framboise.
+\init Cuire 7-8 minutes à 180\degrees C, laisser tiédir pour démouler.
+\init Pour le coulis, chauffer
+l’eau et le sucre pendant 5 minutes dans une casserole puis incorporer les framboises. Retirer du
+feu et laisser refroidir. Mixer et passer au chinois pour retirer les pépins. 
+}
+
+\astuce{On peut préparer l'appareil à l'avance et mettre au congélateur. Dans ce cas, on cuira 10
+minutes et on omettra le carré de chocolat}

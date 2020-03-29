@@ -1,0 +1,167 @@
+\usepackage{fp}
+\usepackage{ifthen}
+
+\newcommand{\kcal}{0}
+\newcommand{\prot}{0}
+\newcommand{\gluc}{0}
+\newcommand{\lipi}{0}
+\newcommand{\poids}{0}
+
+\newcommand{\farine}[1]{%
+    #1g de farine
+    \FPeval{\kcal}{\kcal+#1*3.69}
+    \FPeval{\prot}{\prot+#1*.10}
+    \FPeval{\gluc}{\gluc+#1*.80}
+    \FPeval{\lipi}{\lipi+#1*.01}
+    \FPeval{\poids}{\poids+#1}
+}
+
+\newcommand{\sucre}[1]{%
+    #1g de sucre
+    \FPeval{\kcal}{\kcal+#1*4.00}
+    \FPeval{\prot}{\prot+#1*0}
+    \FPeval{\gluc}{\gluc+#1*1}
+    \FPeval{\lipi}{\lipi+#1*.0}
+    \FPeval{\poids}{\poids+#1}
+}
+
+\newcommand{\sucreglace}[1]{%
+    #1g de sucre glace
+    \FPeval{\kcal}{\kcal+#1*4.00}
+    \FPeval{\prot}{\prot+#1*0}
+    \FPeval{\gluc}{\gluc+#1*1}
+    \FPeval{\lipi}{\lipi+#1*.0}
+    \FPeval{\poids}{\poids+#1}
+}
+
+\newcommand{\beurre}[1]{%
+    #1g de beurre
+    \FPeval{\kcal}{\kcal+#1*7.6}
+    \FPeval{\prot}{\prot+#1*.01}
+    \FPeval{\gluc}{\gluc+#1*0}
+    \FPeval{\lipi}{\lipi+#1*.84}
+    \FPeval{\poids}{\poids+#1}
+}
+
+\newcommand{\poudreamande}[1]{%
+    #1g de poudre d'amande
+    \FPeval{\kcal}{\kcal+#1*6.34}
+    \FPeval{\prot}{\prot+#1*.2}
+    \FPeval{\gluc}{\gluc+#1*.17}
+    \FPeval{\lipi}{\lipi+#1*.54}
+    \FPeval{\poids}{\poids+#1}
+}
+
+
+\newcommand{\beurreramolli}[1]{%
+    #1g de beurre ramolli
+    \FPeval{\kcal}{\kcal+#1*7.6}
+    \FPeval{\prot}{\prot+#1*.01}
+    \FPeval{\gluc}{\gluc+#1*0}
+    \FPeval{\lipi}{\lipi+#1*.84}
+    \FPeval{\poids}{\poids+#1}
+}
+
+\newcommand{\beurrefondu}[1]{%
+    #1g de beurre fondu
+    \FPeval{\kcal}{\kcal+#1*7.6}
+    \FPeval{\prot}{\prot+#1*.01}
+    \FPeval{\gluc}{\gluc+#1*0}
+    \FPeval{\lipi}{\lipi+#1*.84}
+    \FPeval{\poids}{\poids+#1}
+}
+
+\newcommand{\beurredemisel}[1]{%
+    #1g de beurre demi-sel
+    \FPeval{\kcal}{\kcal+#1*7.25}
+    \FPeval{\prot}{\prot+#1*.07}
+    \FPeval{\gluc}{\gluc+#1*0.05}
+    \FPeval{\lipi}{\lipi+#1*.8}
+    \FPeval{\poids}{\poids+#1}
+}
+
+\newcommand{\lait}[1]{%
+    #1g de lait
+    \FPeval{\kcal}{\kcal+#1*.46}
+    \FPeval{\prot}{\prot+#1*.32}
+    \FPeval{\gluc}{\gluc+#1*.48}
+    \FPeval{\lipi}{\lipi+#1*.016}
+    \FPeval{\poids}{\poids+#1}
+}
+
+\newcommand{\oeufs}[1]{%
+    #1 \oe uf\ifthenelse{\equal{#1}{1}}{}{s}
+    \FPeval{\kcal}{\kcal+#1*75}
+    \FPeval{\prot}{\prot+#1*6.4}
+    \FPeval{\gluc}{\gluc+#1*0.1}
+    \FPeval{\lipi}{\lipi+#1*5.7}
+    \FPeval{\poids}{\poids+50}
+}
+
+\newcommand{\jaunesoeufs}[1]{%
+    #1 jaune\ifthenelse{\equal{#1}{1}}{}{s} d'\oe 
+uf\ifthenelse{\equal{#1}{1}}{}{s}
+    \FPeval{\kcal}{\kcal+#1*61}
+    \FPeval{\prot}{\prot+#1*.32}
+    \FPeval{\gluc}{\gluc+#1*0}
+    \FPeval{\lipi}{\lipi+#1*.54}
+    \FPeval{\poids}{\poids+20}
+}
+
+
+
+\newcommand{\demilevure}{%
+    1/2 sachet de levure
+    \FPeval{\kcal}{\kcal+11*.76}
+    \FPeval{\prot}{\prot+11*0}
+    \FPeval{\gluc}{\gluc+11*.19}
+    \FPeval{\lipi}{\lipi+11*0}
+    \FPeval{\poids}{\poids+11}
+}
+
+\newcommand{\chocolatnoir}[1]{%
+    #1g de chocolat noir
+    \FPeval{\kcal}{\kcal+#1*5.5}
+    \FPeval{\prot}{\prot+#1*.08}
+    \FPeval{\gluc}{\gluc+#1*.40}
+    \FPeval{\lipi}{\lipi+#1*.40}
+    \FPeval{\poids}{\poids+#1}
+}
+
+
+
+\newcommand{\chocolatmorceaux}[1]{%
+    #1g de chocolat en morceaux
+    \FPeval{\kcal}{\kcal+#1*5.5}
+    \FPeval{\prot}{\prot+#1*.08}
+    \FPeval{\gluc}{\gluc+#1*.40}
+    \FPeval{\lipi}{\lipi+#1*.40}
+    \FPeval{\poids}{\poids+#1}
+}
+
+\newcommand{\chocolatblancmorceaux}[1]{%
+    #1g de chocolat blanc en morceaux
+    \FPeval{\kcal}{\kcal+#1*5.5}
+    \FPeval{\prot}{\prot+#1*.08}
+    \FPeval{\gluc}{\gluc+#1*.40}
+    \FPeval{\lipi}{\lipi+#1*.40}
+    \FPeval{\poids}{\poids+#1}
+}
+
+\newcommand{\chocolatcaramelmorceaux}[1]{%
+    #1g de chocolat au caramel en morceaux
+    \FPeval{\kcal}{\kcal+#1*5.5}
+    \FPeval{\prot}{\prot+#1*.08}
+    \FPeval{\gluc}{\gluc+#1*.40}
+    \FPeval{\lipi}{\lipi+#1*.40}
+    \FPeval{\poids}{\poids+#1}
+}
+
+\newcommand{\chocolatlaitmorceaux}[1]{%
+    #1g de chocolat au lait en morceaux
+    \FPeval{\kcal}{\kcal+#1*5.5}
+    \FPeval{\prot}{\prot+#1*.08}
+    \FPeval{\gluc}{\gluc+#1*.40}
+    \FPeval{\lipi}{\lipi+#1*.40}
+    \FPeval{\poids}{\poids+#1}
+}

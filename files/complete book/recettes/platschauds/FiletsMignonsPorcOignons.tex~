@@ -1,0 +1,25 @@
+\recette[Filet mignon]{Filet mignon de porc aux oignons}
+
+\index{nom}{Filet mignon de porc aux oignons}
+\index{cat}{Plats Chauds!Filet mignon de porc aux oignons}
+
+\temps{15 minutes}{40 minutes}
+
+\ingredients[pour 4 personnes]{
+\item 2 filets mignons de porc
+\item 1 gros oignons
+\item du thym
+\item de la sauge
+\item huile, beurre
+}
+
+\preparation{%
+\init Émincer et faire blondir l'oignon dans de l'huile et du beurre. Réserver.
+\init Dans la même poêle,
+faire dorer les filets mignons de chaque côté. Installer le thym et la sauge sous et sur les filets.
+Saler.
+\init Remettre les oignons, et laisser cuire environ 30 minutes avec un couvercle.
+}
+
+\variante{15 minutes avant la fin de la cuisson, on pourra ajouter une tomate et quelques pruneaux
+secs.}

@@ -1,0 +1,10 @@
+mktextfm hlcriw8t
+mktextfm nullfont
+mktextfm hlcriw8t
+mktextfm nullfont
+mktextfm dcssq8
+mktextfm nullfont
+mktextfm dcssq8
+mktextfm nullfont
+mktexpk --mfmode / --bdpi 600 --mag 2+293/600 --dpi 1493 wnris10
+mktexpk --mfmode / --bdpi 600 --mag 2+293/600 --dpi 1493 wnrit10

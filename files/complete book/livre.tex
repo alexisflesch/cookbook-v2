@@ -1,0 +1,160 @@
+\documentclass{book}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[french]{babel}
+\usepackage{nicefrac}
+\usepackage{graphicx}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{livrerecettes}
+\usepackage{calories}
+
+\usepackage{eso-pic}
+\newcommand\BackgroundPic[1]{
+\put(0,0){
+\parbox[b][\paperheight]{\paperwidth}{%
+\vfill
+\centering
+\includegraphics[width=\paperwidth,height=\paperheight]{#1}%
+\vfill
+}}}
+
+\usepackage{multind}
+\makeindex{cat} %Index par catégories (gâteaux, tartes, viandes, poissons...)
+\makeindex{nom} %Index par nom de recettes
+
+
+%%%%%%%%%%%%%%%% Ajouter une recette + compteur de recettes
+\newcounter{nbrecettes}
+\newcommand{\ajoute}[3]{%
+    \include{#1}%
+    \graph[sgraph=photos/petites/#2, bgraph=photos/grandes/#3]%
+    \refstepcounter{nbrecettes}%
+}
+
+\pagestyle{empty}
+
+%######################## Définition du titre ######################
+\definecolor{monbleu}{HTML}{464b6a}
+\title{%
+\begin{tikzpicture}[overlay]
+    \draw[color=white] (0,0) node {~};
+    %Coin haut
+    \draw[color=orange, line width=4pt] (-8,1) -- (-8,5);
+    \draw[color=orange, line width=4pt] (-8.5,4.5) -- (-4,4.5);
+    %Mon cahier de recettes
+    \draw[color=orange] (-8,2) node[right] {{\bsi{70pt}{75pt}Mon cahier}};
+    \draw[color=orange] (8,-1.5) node[left] {{\bsi{70pt}{75pt}de recettes}};
+    %Coin bas
+    \draw[color=orange, line width=4pt] (4.5,-3.7) -- (9,-3.7);
+    \draw[color=orange, line width=4pt] (8.5,-4.2) -- (8.5,-.2);
+    %Nombre de recettes
+    \draw[color=monbleu] (8,-13.5) node[left] {{\bsi{20pt}{22pt} \ref{nbrecettes} recettes
+        pour les gourmands}};
+\end{tikzpicture}
+}
+\author{~}
+\date{~}
+
+
+
+%%%%%%%%%%%%%%%%%%% TABLE DES MATIÈRES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Control the fonts and formatting used in the table of contents.
+\usepackage[titles]{tocloft}
+%% Aesthetic spacing redefines that look nicer to me than the defaults.
+\setlength{\cftbeforechapskip}{2ex}
+\setlength{\cftbeforesecskip}{.5ex}
+% Police pour les parties dans la table des matières
+\renewcommand{\cftpartfont}{%
+  \bsi{18pt}{19pt}
+}
+
+
+%%% INDEXES : pour ne pas qu'ils apparaissent dans la table des matières
+\makeatletter
+\def\printindex#1#2{\@restonecoltrue\if@twocolumn\@restonecolfalse\fi
+  \columnseprule \z@ \columnsep 35pt
+  \newpage \twocolumn[{\Large\bf #2 \vskip4ex}]
+  \markright{\uppercase{#2}}
+  \@input{#1.ind}}
+\makeatother
+
+
+%Jolie table des matières
+\makeatletter
+\renewcommand*\l@subsubsection{\hfill\newline}
+\makeatother
+
+
+\begin{document}
+
+
+
+\frontmatter
+\AddToShipoutPicture*{\BackgroundPic{couverture/background_couv.png}}
+\maketitle
+\renewcommand{\thepage}{}
+
+\renewcommand{\contentsname}{%
+\noindent\hspace{-1cm}
+\textcolor{monbleu}{\bsi{45pt}{58pt}Table des matières}%
+}
+\tableofcontents
+
+\mainmatter
+
+% \AddToShipoutPicture{\BackgroundPic{patisserie/background_patisserie.png}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% ENTRÉES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\cleardoublepage
+\begin{tikzpicture}[overlay]
+    \draw[color=white] (0,0) node[right] {~};
+    \draw[color=monbleu] (0.5,-7) node[right] {{\bsi{50pt}{58pt}Première partie}};
+    \draw[color=monbleu] (3.2,-9.5) node[right] {{\bsi{50pt}{58pt}Entrées}};
+\end{tikzpicture}
+\renewcommand{\thepage}{}
+\addcontentsline{toc}{part}{Entrées \bigskip}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% PLATS CHAUDS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\cleardoublepage
+\begin{tikzpicture}[overlay]
+    \draw[color=white] (0,0) node[right] {~};
+    \draw[color=monbleu] (0.5,-7) node[right] {{\bsi{50pt}{58pt}Deuxième partie}};
+    \draw[color=monbleu] (1.5,-9.5) node[right] {{\bsi{50pt}{58pt}Plats chauds}};
+\end{tikzpicture}
+\renewcommand{\thepage}{}
+\addcontentsline{toc}{part}{Plats Chauds \bigskip}%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% PATISSERIE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\cleardoublepage
+\begin{tikzpicture}[overlay]
+    \draw[color=white] (0,0) node[right] {~};
+    \draw[color=monbleu] (0.5,-7) node[right] {{\bsi{50pt}{58pt}Troisième partie}};
+    \draw[color=monbleu] (2.5,-9.5) node[right] {{\bsi{50pt}{58pt}Pâtisserie}};
+\end{tikzpicture}
+\renewcommand{\thepage}{}
+\addcontentsline{toc}{part}{Pâtisserie \bigskip}%
+
+
+\ajoute{recettes/patisserie/ShortBread}{shortbread}{beurre}
+
+%%%%%%%% Nombre de recettes
+\label{nbrecettes}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%% Annexes %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\backmatter
+\cleardoublepage
+
+\begin{tikzpicture}
+    \draw[color=white] (0,0) node[right] {~};
+    \draw[color=myblue] (0.5,-7) node[right] {{\bsi{50pt}{58pt}Annexes}};
+\end{tikzpicture}
+\renewcommand{\thepage}{}
+
+
+\printindex{nom}{\bsi{20pt}{25pt}Index alphabétique des recettes}
+\printindex{cat}{\bsi{20pt}{25pt}Index par catégories des recettes}
+
+
+\end{document}

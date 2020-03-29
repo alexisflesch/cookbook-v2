@@ -1,0 +1,17 @@
+quote '*'
+level '!'
+encap '|'
+page_compositor '-'
+preamble "\\begin{theindex}\n"
+postamble "\n\n\\end{theindex}\n"
+item_0 "\n \\vspace{.6cm} \\item \\hspace{\\stretch{1}} \\Large {\\bf " 
+item_x1 "}\\hspace{\\stretch{1}}\\vspace{.2cm} \\normalsize \n \\subitem " 
+item_2 "\n \\subsubitem "
+delim_0 "\\ "
+delim_1 "\\dotfill"
+delim_2 "\\dotfill"
+delim_r "~--~"
+suffix_2p "\\,f."
+suffix_3p "\\,ff." 
+heading_prefix "\\vspace{6cm}\\hspace*{-1ex}{\\bf\\Large " 
+heading_suffix "}\n "

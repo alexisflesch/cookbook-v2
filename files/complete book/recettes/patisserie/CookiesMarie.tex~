@@ -1,0 +1,33 @@
+\recette{Cookies de Marie}
+
+\index{nom}{Cookies}
+\index{cat}{Gateaux@Gâteaux!Cookies}
+
+\temps{10 minutes}{12 minutes}
+
+\ingredients{
+\item 125g de beurre fondu
+\item 1 œuf
+\item 150g de sucre en poudre
+\item 225g de farine
+\item 1/2 sachet de levure
+\item 150g de chocolat en morceaux
+\item des amandes ou des noisettes
+\item un sachet de sucre vanillé (facultatif)
+}
+
+
+\preparation{
+\init Préchauffer le four à 180\degrees~et faire fondre le beurre. Pendant ce temps, mélanger la
+farine
+la levure et le sucre. Ajouter le beurre fondu ainsi que l'\oe uf. Ajouter enfin les morceaux
+de chocolat et les amandes (ou les noisettes).
+\init Faire des petites boules sur du papier cuisson et enfourner à mi-hauteur pendant environ 12
+minutes.
+}
+
+\attention{Ne pas utiliser de feuille de silicone pour la cuisson !}
+% \graph[%
+% sgraph=recettes/patisserie/CookiesMarie/petite,
+% bgraph=recettes/patisserie/CookiesMarie/grande
+% ]

@@ -1,0 +1,7 @@
+pdflatex livre.tex
+pdflatex livre.tex
+makeindex -s nom.ist nom.idx
+makeindex -s cat.ist cat.idx
+makeindex -s smo.ist smo.idx
+makeindex -s smo.ist ing.idx
+pdflatex livre.tex

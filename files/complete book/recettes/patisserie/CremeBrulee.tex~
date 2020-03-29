@@ -1,0 +1,21 @@
+\recette{Crème Brûlée}
+\index{nom}{Creme Brulee@Crème Brûlée}
+\index{cat}{Desserts@Creme Brulee@Crème Brûlée}
+
+\temps{5 minutes}{1h10}
+
+\ingredients[pour 4 crèmes brûlées]{
+\item 4 jaunes d'\oe ufs
+\item 80g de sucre
+\item 40cl de crème liquide
+\item du sucre roux pour le caramel
+}
+
+
+\preparation{%
+\init Mélanger les jaunes d'\oe ufs avec le sucre puis ajouter la crème.
+\init Enfourner pendant environ 1h10 à 100\degrees C.
+}
+
+\astuce{Couvrir éventuellement le dernier quart d'heure pour ne pas brûler les cannelés.}
+

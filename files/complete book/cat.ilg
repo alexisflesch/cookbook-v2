@@ -1,0 +1,10 @@
+This is makeindex, version 2.15 [TeX Live 2009] (kpathsea + Thai support).
+Scanning style file ./cat.ist...
+** Input style error (file = ./cat.ist, line = 4):
+   -- No opening delimiter.
+.............done (16 attributes redefined, 1 ignored).
+Scanning input file cat.idx....done (1 entries accepted, 0 rejected).
+Sorting entries...done (0 comparisons).
+Generating output file cat.ind....done (7 lines written, 0 warnings).
+Output written in cat.ind.
+Transcript written in cat.ilg.
