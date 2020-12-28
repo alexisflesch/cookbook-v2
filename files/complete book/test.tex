@@ -1,0 +1,47 @@
+\documentclass[a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{python}
+\usepackage{calories}
+\usepackage{livrerecettes}
+\usepackage{xcolor}
+
+\begin{document}
+
+
+\ingredients{%
+    \item \farine{65}
+    \item \oeufs{3}
+    \item \beurre{40}
+    \item \lait{250}
+}
+
+
+\medskip
+
+
+\begin{picture}(100,56)
+    %longueurs
+    \setlength{\unitlength}{1pt}
+    \FPeval{\rprot}{\prot/81*300}
+    \FPeval{\rgluc}{\gluc/325*300}
+    \FPeval{\rlipi}{\lipi/88*300}
+    \FPeval{\rkcal}{\kcal/250*200}
+    %Calories
+    \put(0,42){\textcolor{GreenYellow}{\rule{\rkcal pt}{14pt}}}
+    \put(0,46){\small \kcal}
+    \put(80,46){\small Kcal}
+    %Protéines
+    \put(0,28){\textcolor{CornflowerBlue}{\rule{\rprot pt}{14pt}}}
+    \put(0,32){\small \prot g}
+    \put(80,32){\small protéines}
+    %Glucides
+    \put(0,14){\textcolor{LimeGreen}{\rule{\rgluc pt}{14pt}}}
+    \put(0,18){\small \gluc g}
+    \put(80,18){\small glucides}
+    %Lipides
+    \put(0,0){\textcolor{Dandelion}{\rule{\rlipi pt}{14pt}}}
+    \put(0,4){\small \lipi g}
+    \put(80,4){\small lipides}
+\end{picture}
+
+\end{document}
